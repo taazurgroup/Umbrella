@@ -131,43 +131,43 @@ doc_events = {
 
  	"Material Request": 
     {
-        "validate": "indipco.hooks_call.material_request.sales_user_validation"
+        "validate": "umbrella.hooks_call.material_request.sales_user_validation"
     },
 
  	"Salary Structure Assignment": 
     {
-        "onload": "indipco.hooks_call.salary_structure_assignment.calculate_gross_salary"
-#        "on_update": "indipco.hooks_call.salary_structure_assignment.calculate_gross_salary"
+        "onload": "umbrella.hooks_call.salary_structure_assignment.calculate_gross_salary"
+#        "on_update": "umbrella.hooks_call.salary_structure_assignment.calculate_gross_salary"
     },
 
  	"Additional Salary": 
     {
         "validate": [
 
-                    "indipco.hooks_call.additional_salary.validate_annual_leave_settlement",
-                    "indipco.hooks_call.additional_salary.calculate_esb_settlement",
-                    "indipco.hooks_call.additional_salary.calculate_overtime"
+                    "umbrella.hooks_call.additional_salary.validate_annual_leave_settlement",
+                    "umbrella.hooks_call.additional_salary.calculate_esb_settlement",
+                    "umbrella.hooks_call.additional_salary.calculate_overtime"
 
                     ]
     },
 
     "Salary Slip": 
     {
-        "validate": "indipco.hooks_call.salary_slip.validate_calculate_end_date"
+        "validate": "umbrella.hooks_call.salary_slip.validate_calculate_end_date"
     },
 
 #    "Stock Entry": {
-#                "validate": "indipco.hooks_call.stock_entry.validate_purpose_manufacture"
+#                "validate": "umbrella.hooks_call.stock_entry.validate_purpose_manufacture"
 #	},
 
  	"Loan": 
     {
- 		"validate": "indipco.hooks_call.loan.duplicate_loan"
+ 		"validate": "umbrella.hooks_call.loan.duplicate_loan"
 	}
 #        "Leave Allocation": 
 #   {
-#       "validate": "indipco.hooks_call.leave_allocation.calculate_days_to_allocate"
-#       "refresh": "indipco.hooks_call.leave_allocation.test"
+#       "validate": "umbrella.hooks_call.leave_allocation.calculate_days_to_allocate"
+#       "refresh": "umbrella.hooks_call.leave_allocation.test"
 #   },
 
 }
