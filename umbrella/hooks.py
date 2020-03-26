@@ -127,3 +127,57 @@ app_license = "MIT"
 # 	"Task": "umbrella.task.get_dashboard_data"
 # }
 
+doc_events = {
+
+ 	"Material Request": 
+    {
+        "validate": "indipco.hooks_call.material_request.sales_user_validation"
+    },
+
+ 	"Salary Structure Assignment": 
+    {
+        "onload": "indipco.hooks_call.salary_structure_assignment.calculate_gross_salary"
+#        "on_update": "indipco.hooks_call.salary_structure_assignment.calculate_gross_salary"
+    },
+
+ 	"Additional Salary": 
+    {
+        "validate": [
+
+                    "indipco.hooks_call.additional_salary.validate_annual_leave_settlement",
+                    "indipco.hooks_call.additional_salary.calculate_esb_settlement",
+                    "indipco.hooks_call.additional_salary.calculate_overtime"
+
+                    ]
+    },
+
+    "Salary Slip": 
+    {
+        "validate": "indipco.hooks_call.salary_slip.validate_calculate_end_date"
+    },
+
+#    "Stock Entry": {
+#                "validate": "indipco.hooks_call.stock_entry.validate_purpose_manufacture"
+#	},
+
+ 	"Loan": 
+    {
+ 		"validate": "indipco.hooks_call.loan.duplicate_loan"
+	}
+#        "Leave Allocation": 
+#   {
+#       "validate": "indipco.hooks_call.leave_allocation.calculate_days_to_allocate"
+#       "refresh": "indipco.hooks_call.leave_allocation.test"
+#   },
+
+}
+
+
+fixtures = ["Custom Field",
+            "Custom Script",
+            "Print Format",
+            "Report",
+            "Letter Head",
+            "Workflow",
+            "Workflow State"
+            ]
