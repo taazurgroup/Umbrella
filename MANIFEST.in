@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include umbrella *.css
+recursive-include umbrella *.csv
+recursive-include umbrella *.html
+recursive-include umbrella *.ico
+recursive-include umbrella *.js
+recursive-include umbrella *.json
+recursive-include umbrella *.md
+recursive-include umbrella *.png
+recursive-include umbrella *.py
+recursive-include umbrella *.svg
+recursive-include umbrella *.txt
+recursive-exclude umbrella *.pyc
